@@ -59,7 +59,7 @@ function quantity(stock, res) {
             console.log("Sorry, insufficient quantity!")
         }
         else {
-            var updatedQuantity = res[stock].stock_quantity - x.quantity;
+            var updatedQuantity = (res[stock].stock_quantity) - (x.quantity);
             var price = res[stock].price * x.quantity;
             //console.log(updatedQuantity);
             console.log("That will cost: $" + price);
