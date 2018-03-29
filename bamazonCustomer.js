@@ -60,7 +60,10 @@ function quantity(stock, res) {
         }
         else {
             var updatedQuantity = res[stock].stock_quantity - x.quantity;
-            console.log(updatedQuantity);          
+            var price = res[stock].price * x.quantity;
+            //console.log(updatedQuantity);
+            console.log("That will cost: $" + price);
+          
             connection.query("UPDATE products SET ? WHERE ?",
                 [
                     {
